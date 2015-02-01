@@ -15,7 +15,7 @@ class Otama < Formula
 
   def install
     system 'sh autogen.sh'
-    system './configure', '--disable-openmp', '--with-ruby=ruby-dev', '--enable-mysql', "--prefix=#{prefix}"
+    system './configure', '--disable-openmp', '--without-ruby', '--enable-mysql', "--prefix=#{prefix}"
     system 'make'
     system 'make', 'install'
   end
